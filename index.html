@@ -11,7 +11,6 @@
 
     <body style="margin: 0; overflow: hidden;">
         <a-scene
-            
             renderer="logarithmicDepthBuffer: true;"
             embedded
             loading-screen="enabled: false;"
@@ -24,33 +23,12 @@
                 ></a-asset-item>
             </a-assets>
 
-            <a-scene renderer="antialias: true;
-                   colorManagement: true;
-                   sortObjects: true;
-                   physicallyCorrectLights: true;"
-                      
-            ></a-scene>
-            
-            <a-entity light="type: ambient; color: #CCC; intensity: 0.9"></a-entity>
-            
-            <a-entity camera look-controls position="0 1.6 0"></a-entity>
-            
-            <a-entity light="type:directional; castShadow:true;" position="1 1 1"></a-entity>
-<a-gltf-model src="tree.gltf" shadow="receive: false"></a-gltf-model>
-           
-            <a-camera id='camera1' look-controls-enabled='false' 
-            arjs-look-controls='smoothingFactor: 0.8' gps-camera='gpsMinDistance: 10' 
-            rotation-reader> </a-camera>
                 <a-entity
-
+                    look-at="[gps-camera]"
                     animation-mixer="loop: repeat"
                     gltf-model="#animated-asset"
-                    scale="0.04162979014061854 0.04162979014061854 0.04162979014061854"
-                    rotation="0 210 0"
-                     position="0 0 0" 
-             
+                    scale="0.03795574816874225 0.03795574816874225 0.03795574816874225"
                     gps-entity-place="latitude: 40.21436227502767; longitude: -74.43964357338243;"
-                          
                 ></a-entity>
 
             <a-camera gps-camera rotation-reader></a-camera>
